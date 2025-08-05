@@ -1,4 +1,3 @@
-import CodeBlock from '@theme/CodeBlock'
 import Layout from '@theme/Layout'
 import { memo, useRef } from 'react'
 
@@ -6,36 +5,17 @@ import { Friend, Friends } from '@site/data/friends'
 
 import Link from '@docusaurus/Link'
 import { motion } from 'framer-motion'
-import styles from './styles.module.css'
 
 const TITLE = '友链'
 const DESCRIPTION = '有很多良友，胜于有很多财富。'
-const ADD_FRIEND_URL = 'https://github.com/kuizuo/blog/edit/main/data/friends.tsx'
-const SITE_INFO = `title: '愧怍'
-description: '道阻且长，行则将至'
-website: 'https://kuizuo.me'
-avatar: 'https://kuizuo.me/img/logo.png'
-`
-const friends = Friends
 
-function SiteInfo() {
-  return (
-    <div className="w-96 rounded-[var(--ifm-pre-border-radius)] border border-solid border-black border-opacity-10 text-left text-sm leading-none">
-      <CodeBlock language="yaml" title="本站信息" className={styles.codeBlock}>
-        {SITE_INFO}
-      </CodeBlock>
-    </div>
-  )
-}
+const friends = Friends
 
 function FriendHeader() {
   return (
     <section className="margin-top--lg margin-bottom--lg text-center">
       <h1>{TITLE}</h1>
       <p>{DESCRIPTION}</p>
-      {/* <a className="button button--primary" href={ADD_FRIEND_URL} target="_blank" rel="noreferrer">
-        🔗 申请友链
-      </a> */}
     </section>
   )
 }
@@ -88,9 +68,6 @@ export default function FriendLink(): JSX.Element {
       <motion.main ref={ref} className="my-4">
         <FriendHeader />
         <FriendCards />
-        <motion.div drag dragConstraints={ref} className="sticky bottom-4 left-4 inline-flex cursor-move text-right">
-          <SiteInfo />
-        </motion.div>
       </motion.main>
     </Layout>
   )
