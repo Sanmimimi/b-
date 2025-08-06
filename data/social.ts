@@ -1,13 +1,13 @@
 export type Social = {
   github?: string
-  x?: string
-  juejin?: string
+  weibo?: string
+  bilibili?: string
   qq?: string
   wx?: string
   cloudmusic?: string
   zhihu?: string
   email?: string
-  discord?: string
+  douyin?: string 
 }
 
 type SocialValue = {
@@ -19,14 +19,14 @@ type SocialValue = {
 
 const social: Social = {
   github: 'https://github.com/kuizuo',
-  x: 'https://twitter.com/kuizuo',
-  juejin: 'https://juejin.cn/user/1565318510545901',
+  weibo: 'https://weibo.com',
+  bilibili: 'https://space.bilibili.com',
   wx: 'https://img.kuizuo.me/wechat.png',
   // qq: 'https://img.kuizuo.me/qq.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
   cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
   email: 'mailto:hi@kuizuo.me',
-  discord: 'https://discord.gg/M8cVcjDxkz',
+  douyin: 'https://www.douyin.com',
 }
 
 const socialSet: Record<keyof Social | 'rss', SocialValue> = {
@@ -36,17 +36,17 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     icon: 'ri:github-line',
     color: '#010409',
   },
-  juejin: {
-    href: social.juejin,
-    title: '掘金',
-    icon: 'simple-icons:juejin',
-    color: '#1E81FF',
+  bilibili: {
+    href: social.bilibili,
+    title: '哔哩哔哩',
+    icon: 'ri:bilibili-line',
+    color: '#00A1D6',
   },
-  x: {
-    href: social.x,
-    title: 'X',
-    icon: 'ri:twitter-x-line',
-    color: '#000',
+  weibo: {
+    href: social.weibo,
+    title: '微博',
+    icon: 'ri:weibo-line',
+    color: '#E6162D',
   },
   wx: {
     href: social.wx,
@@ -60,11 +60,11 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     icon: 'ri:zhihu-line',
     color: '#1772F6',
   },
-  discord: {
-    href: social.discord,
-    title: 'Discord',
-    icon: 'ri:discord-line',
-    color: '#5A65F6',
+  douyin: {
+    href: social.douyin,
+    title: '抖音',
+    icon: 'simple-icons:tiktok',
+    color: '#000000',
   },
   qq: {
     href: social.qq,
